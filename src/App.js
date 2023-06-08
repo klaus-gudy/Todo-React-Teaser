@@ -17,7 +17,8 @@ function App() {
       title: todo.title,
       description: todo.description,
       completed: false,
-      created: new Date().toLocaleString()
+      created: new Date().toLocaleString(),
+      lastUpdated: new Date().toString()
     };
     setTodos([...todos, newTodo]);
     console.log(todos)
