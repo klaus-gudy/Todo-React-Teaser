@@ -1,24 +1,47 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import Addtodo from './components/Addtodo';
+import Listtodo from './components/Listtodo';
+import { v4 as uuidv4 } from 'uuid';
+
+uuidv4();
+
+//GET https://dev.hisptz.com/dhis2/api/dataStore/${your-name }?fields=.
 
 function App() {
+  const [todos, setTodos] = useState([]);
+  
+  const onAddPost = todo =>{
+    const newTodo = {
+      id: uuidv4(),
+      title: todo.title,
+      description: todo.description,
+      completed: false,
+      created: new Date().toLocaleString()
+    };
+    setTodos([...todos, newTodo]);
+    console.log(todos)
+  }
+
+  const onDeletePost = (id) => {
+    setTodos(todos.filter((todo) => todo.id !== id));
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        {/* <Navbar/> */}
+        <p>TODO APP</p>
+
+        <Addtodo onAddPost={onAddPost} />
+        <Listtodo todos={todos} onDeletePost = {onDeletePost} />
+{/* 
+        <Routes>
+          <Route path='/' element= { <Addtodo onAddPost={onAddPost} />}/>
+          <Route path='/list' element= { <Listtodo/>}/>
+        </Routes> */}
+      </div> 
+    </Router>
   );
 }
 
