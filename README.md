@@ -11,9 +11,9 @@ This is a functional To-do application that allows users to manage their tasks a
 
 ## Technologies used
 
-[React](https://reactjs.org/): This is a javascript library
-[Axios](https://axios-http.com/docs/intro) : HTTP client library for making asycnchronous request to API
-[Tailwindcss](https://tailwindcss.com/docs) : 
+- [React](https://reactjs.org/): This is a javascript library
+- [Axios](https://axios-http.com/docs/intro) : HTTP client library for making asycnchronous request to API
+- [Tailwindcss](https://tailwindcss.com/docs) : 
 React Router : For defining and handling routes in the application
 
 ## Installation and Setup
@@ -43,5 +43,5 @@ This Todo app integrates with an API of [hisp](https://dev.hisptz.com/dhis2) to 
 
 ## Screenshots
 
-![Image of TODO form](path/to/your/image.png)
-![Image Showing a list of TODOS](path/to/your/image.png)
+![Image of TODO form](https://github.com/klaus-gudy/Todo-React-Teaser/blob/master/public/screenshots/todo%201.png)
+![Image Showing a list of TODOS](https://github.com/klaus-gudy/Todo-React-Teaser/blob/master/public/screenshots/todo2.png)
