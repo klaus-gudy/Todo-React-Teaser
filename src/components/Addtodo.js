@@ -27,13 +27,13 @@ function Addtodo({onAddPost}) {
 
   return (
     <div>
-      <h2>Add Blog Post</h2>
-      <form onSubmit={handleSubmit} >
-        <input type="text" name="title" value={title} onChange={handleChange} placeholder='title'/>
+      <h2>Add Task</h2>
+      <form className="mb-4" onSubmit={handleSubmit} >
+        <input type="text" className="border border-gray-300 p-2 mb-2" name="title" value={title} onChange={handleChange} placeholder='title'/>
         <br></br>
-        <input type="text" name="description" value={description} onChange={handleChange} placeholder='description'/>
+        <input type="text" className="border border-gray-300 p-2 mb-2" name="description" value={description} onChange={handleChange} placeholder='description'/>
         <br></br>
-        <button>submit</button>
+        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">submit</button>
       </form>
     </div>
   )

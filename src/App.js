@@ -29,9 +29,9 @@ function App() {
 
   return (
     <Router>
-      <div className="App">
+      <div className="App flex flex-col items-center justify-center min-h-screen">
         {/* <Navbar/> */}
-        <p>TODO APP</p>
+        <p className="text-4xl font-bold text-center mt-8">TODO APP</p>
 
         <Addtodo onAddPost={onAddPost} />
         <Listtodo todos={todos} onDeletePost = {onDeletePost} />
