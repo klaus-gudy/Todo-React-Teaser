@@ -1,70 +1,47 @@
-# Getting Started with Create React App
+# React-Todo-App    
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a functional To-do application that allows users to manage their tasks and track their progress.
 
-## Available Scripts
+## Features and Functionalities
 
-In the project directory, you can run:
+- Add new To-do item
+- View the To-do list
+- Delete a To-do item
+- Change the status of a To-do item
 
-### `npm start`
+## Technologies used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+[React](https://reactjs.org/): This is a javascript library
+[Axios](https://axios-http.com/docs/intro) : HTTP client library for making asycnchronous request to API
+[Tailwindcss](https://tailwindcss.com/docs) : 
+React Router : For defining and handling routes in the application
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Installation and Setup
 
-### `npm test`
+1. Clone the repository to your local machine:
+`git clone https://github.com/your-username/todo-app.git`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. Navigate to the project directory:
+`cd todo-app`
 
-### `npm run build`
+3. Install the dependencies using npm or Yarn:
+`npm install`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Usage
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To run the React app locally, use the following command:
+```npm start```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- It will take you to the browser .
+- To add a new task, enter the task title and description in the provided input fields and click the "Submit" button.
+- To mark a task as completed, click the checkbox next to the task.
+- To delete a task, click the "Delete" button next to the task.
 
-### `npm run eject`
+## API intergration
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+This Todo app integrates with an API of [hisp](https://dev.hisptz.com/dhis2) to store and retrieve task data.he app communicates with the API using Axios library. Basic authentication is required to access the API.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Screenshots
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![Image of TODO form](path/to/your/image.png)
+![Image Showing a list of TODOS](path/to/your/image.png)
