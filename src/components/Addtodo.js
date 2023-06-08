@@ -1,4 +1,6 @@
+import axios from 'axios';
 import React, {useState} from 'react'
+
 
 function Addtodo({onAddPost}) {
   const [formdata, setFormdata] = useState({
@@ -15,14 +17,35 @@ function Addtodo({onAddPost}) {
   };
   
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e, id) => {
     e.preventDefault();//prevents browser loads during submission
     //console.log(title)
-    onAddPost(formdata)
-    setFormdata({
-      title: '',
-      description: ''
-    }); //clear the value after submission
+
+    //new post
+    const newTodo = {
+
+      title: formdata.title,
+      description: formdata.description,
+      completed: false,
+      created: new Date().toLocaleString(),
+      lastUpdated: new Date().toString()
+    };
+
+    
+
+    axios.post(`https://dev.hisptz.com/dhis2/api/dataStore/madadi/${id}`, newTodo, {auth:{username:'admin', password:'district'}}).then(
+      (res) => {
+        console.log('Post request successful:', res.data);
+        onAddPost(newTodo);
+        setFormdata({
+          title: '',
+          description: ''
+        }); //clear the value after submission
+
+      }
+    ).catch((error) => {console.error('tatizo', error);});
+
+
     };
 
   return (
