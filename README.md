@@ -45,3 +45,5 @@ This Todo app integrates with an API of [hisp](https://dev.hisptz.com/dhis2) to 
 
 ![Image of TODO form](https://github.com/klaus-gudy/Todo-React-Teaser/blob/master/public/screenshots/todo%201.png)
 ![Image Showing a list of TODOS](https://github.com/klaus-gudy/Todo-React-Teaser/blob/master/public/screenshots/todo2.png)
+
+##Credits
